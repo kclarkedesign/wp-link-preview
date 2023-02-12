@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Link Preview
-Plugin URI: https://example.com/link-preview
+Plugin URI: https://kirkclarke.com/link-preview
 Description: Generates a link preview for a given URL.
 Version: 1.0
 Author: Your Name
-Author URI: https://example.com
+Author URI: https://kirkclarke.com
 */
 
 
@@ -66,9 +66,9 @@ function link_preview_shortcode($atts)
 
     // Build the link preview HTML
     $output = '<div class="link-preview">';
+    $output .= '<a target="_blank" href="' . $url . '"><img class="link-preview__img" src="' . $image[1] . '" alt="' . $title[1] . '"></a>';
     $output .= '<a class="link-preview__title" href="' . $url . '" target="_blank">' . $title[1] . '</a>';
     $output .= '<p class="link-preview__desc">' . $description[1] . '</p>';
-    $output .= '<a href="' . $url . ' target="_blank"><img class="link-preview__img" src="' . $image[1] . '" alt="' . $title[1] . '"></a>';
     $output .= '</div>';
 
     // Cache the data for a certain amount of time
